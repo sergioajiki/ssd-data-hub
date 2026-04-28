@@ -92,7 +92,7 @@ src/main/java/br/gov/ssd/datahub/
 - [x] Configurar Lombok e utilitários
 - [x] Criar estrutura base de testes (JUnit 5, AssertJ)
 - [x] Configurar repositório GitHub (branch strategy, .gitignore)
-- [ ] Criar script de reset do banco para desenvolvimento
+- [x] Criar script de reset do banco para desenvolvimento
 
 ---
 
@@ -229,13 +229,16 @@ src/main/java/br/gov/ssd/datahub/
 - [ ] Revisar segurança e autenticação
 - [ ] Documentação técnica final
 
+**Limpeza de Desenvolvimento**
+- [ ] Remover scripts de reset do banco (`scripts/reset-db.sh` e `scripts/reset-db.bat`)
+
 ---
 
 ## Status das Fases
 
 | Fase | Descrição | Status |
 |---|---|---|
-| Fase 0 | Setup do Projeto | Em andamento |
+| Fase 0 | Setup do Projeto | Concluída |
 | Fase 1 | Einstein | Não iniciada |
 | Fase 2 | Fiocruz | Não iniciada |
 | Fase 3 | Núcleo Telessaúde | Não iniciada |

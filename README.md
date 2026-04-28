@@ -85,13 +85,13 @@ src/main/java/br/gov/ssd/datahub/
 ### Fase 0 — Setup do Projeto
 > Objetivo: Estrutura base funcionando, pronta para receber as implementações das fontes.
 
-- [ ] Criar projeto Spring Boot com estrutura de pacotes hexagonal
-- [ ] Configurar H2 (modo arquivo, reset por propriedade)
-- [ ] Configurar Spring Data JPA
-- [ ] Adicionar dependência Apache POI
-- [ ] Configurar Lombok e utilitários
-- [ ] Criar estrutura base de testes (JUnit 5, AssertJ)
-- [ ] Configurar repositório GitHub (branch strategy, .gitignore)
+- [x] Criar projeto Spring Boot com estrutura de pacotes hexagonal
+- [x] Configurar H2 (modo arquivo, reset por propriedade)
+- [x] Configurar Spring Data JPA
+- [x] Adicionar dependência Apache POI
+- [x] Configurar Lombok e utilitários
+- [x] Criar estrutura base de testes (JUnit 5, AssertJ)
+- [x] Configurar repositório GitHub (branch strategy, .gitignore)
 - [ ] Criar script de reset do banco para desenvolvimento
 
 ---
@@ -235,7 +235,7 @@ src/main/java/br/gov/ssd/datahub/
 
 | Fase | Descrição | Status |
 |---|---|---|
-| Fase 0 | Setup do Projeto | Não iniciada |
+| Fase 0 | Setup do Projeto | Em andamento |
 | Fase 1 | Einstein | Não iniciada |
 | Fase 2 | Fiocruz | Não iniciada |
 | Fase 3 | Núcleo Telessaúde | Não iniciada |

@@ -100,22 +100,22 @@ src/main/java/br/gov/ssd/datahub/
 > Objetivo: Dados da Einstein limpos, validados e persistidos no banco.
 
 **Análise e Mapeamento**
-- [ ] Receber e analisar planilha modelo da Einstein
-- [ ] Documentar dicionário de dados (colunas, tipos, obrigatoriedade)
-- [ ] Mapear colunas da planilha para entidades de domínio
+- [x] Receber e analisar planilha modelo da Einstein
+- [x] Documentar dicionário de dados (colunas, tipos, obrigatoriedade)
+- [x] Mapear colunas da planilha para entidades de domínio
 
 **Domínio**
-- [ ] Criar entidades de domínio da Einstein
-- [ ] Definir objetos de valor (CID, CPF, datas, etc.)
+- [x] Criar entidades de domínio da Einstein
+- [x] Definir objetos de valor (CID, CPF, datas, etc.)
 - [ ] Implementar regras de validação no domínio
 
 **Implementação**
-- [ ] Criar port de entrada `ImportarEinsteinUseCase`
-- [ ] Criar port de saída `EinsteinRepositoryPort`
-- [ ] Implementar adapter de leitura Excel (`EinsteinExcelAdapter`)
-- [ ] Implementar regras de normalização (nomes, datas, CIDs)
+- [x] Criar port de entrada `ImportarEinsteinUseCase`
+- [x] Criar port de saída `EinsteinRepositoryPort`
+- [x] Implementar adapter de leitura Excel (`EinsteinExcelAdapter`)
+- [x] Implementar regras de normalização (nomes, datas, CIDs)
 - [ ] Implementar deduplicação de registros
-- [ ] Implementar adapter de persistência JPA (`EinsteinJpaAdapter`)
+- [x] Implementar adapter de persistência JPA (`EinsteinJpaAdapter`)
 
 **Testes e Validação**
 - [ ] Criar testes unitários das regras de domínio
@@ -239,7 +239,7 @@ src/main/java/br/gov/ssd/datahub/
 | Fase | Descrição | Status |
 |---|---|---|
 | Fase 0 | Setup do Projeto | Concluída |
-| Fase 1 | Einstein | Não iniciada |
+| Fase 1 | Einstein | Em andamento |
 | Fase 2 | Fiocruz | Não iniciada |
 | Fase 3 | Núcleo Telessaúde | Não iniciada |
 | Fase 4 | Consolidação Cruzada | Não iniciada |

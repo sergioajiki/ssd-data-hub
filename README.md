@@ -158,28 +158,28 @@ src/main/java/br/gov/ssd/datahub/
 > Objetivo: Dados do Núcleo Telessaúde limpos, validados e persistidos no banco.
 
 **Análise e Mapeamento**
-- [ ] Receber e analisar planilha modelo do Núcleo Telessaúde
-- [ ] Documentar dicionário de dados
-- [ ] Mapear colunas para entidades de domínio
-- [ ] Identificar campos equivalentes às fontes anteriores
+- [x] Receber e analisar planilha modelo do Núcleo Telessaúde
+- [x] Documentar dicionário de dados
+- [x] Mapear colunas para entidades de domínio
+- [x] Identificar campos equivalentes às fontes anteriores
 
 **Domínio**
-- [ ] Criar/adaptar entidades de domínio do Telessaúde
-- [ ] Implementar regras de validação específicas do Telessaúde
+- [x] Criar/adaptar entidades de domínio do Telessaúde
+- [x] Implementar regras de validação específicas do Telessaúde
 
 **Implementação**
-- [ ] Criar port de entrada `ImportarTelessaudeUseCase`
-- [ ] Criar port de saída `TelessaudeRepositoryPort`
-- [ ] Implementar adapter de leitura Excel (`TelessaudeExcelAdapter`)
-- [ ] Implementar regras de normalização específicas do Telessaúde
-- [ ] Implementar deduplicação de registros
-- [ ] Implementar adapter de persistência JPA (`TelessaudeJpaAdapter`)
+- [x] Criar port de entrada `ImportarTelessaudeUseCase`
+- [x] Criar port de saída `TelessaudeRepositoryPort`
+- [x] Implementar adapter de leitura Excel (`TelessaudeExcelAdapter`)
+- [x] Implementar regras de normalização específicas do Telessaúde
+- [x] Implementar deduplicação de registros
+- [x] Implementar adapter de persistência JPA (`TelessaudeJpaAdapter`)
 
 **Testes e Validação**
-- [ ] Criar testes unitários das regras de domínio
-- [ ] Criar testes de integração
-- [ ] Validar dados persistidos com especialista de domínio
-- [ ] Corrigir ajustes apontados na validação
+- [x] Criar testes unitários das regras de domínio
+- [x] Criar testes de integração
+- [x] Validar dados persistidos com especialista de domínio
+- [x] Corrigir ajustes apontados na validação
 
 ---
 
@@ -241,7 +241,7 @@ src/main/java/br/gov/ssd/datahub/
 | Fase 0 | Setup do Projeto | Concluída |
 | Fase 1 | Einstein | Concluída |
 | Fase 2 | Fiocruz | Concluída |
-| Fase 3 | Núcleo Telessaúde | Não iniciada |
+| Fase 3 | Núcleo Telessaúde | Concluída |
 | Fase 4 | Consolidação Cruzada | Não iniciada |
 | Fase 5 | Relatórios e Entrega | Não iniciada |
 

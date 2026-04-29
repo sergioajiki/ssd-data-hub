@@ -44,6 +44,65 @@ public class TelessaudeJpaAdapter implements TelessaudeRepositoryPort {
         log.info("Telessaúde: {} registros persistidos", novas.size());
     }
 
+    @Override
+    public List<RelatoCasoTelessaude> buscarTodos() {
+        return repository.findAll().stream()
+                .map(this::toDomain)
+                .toList();
+    }
+
+    private RelatoCasoTelessaude toDomain(RelatoCasoTelessaudeEntity e) {
+        return RelatoCasoTelessaude.builder()
+                .rowId(e.getRowId())
+                .emailProfissional(e.getEmailProfissional())
+                .nomeProfissional(e.getNomeProfissional())
+                .motivoRelato(e.getMotivoRelato())
+                .municipio(e.getMunicipio())
+                .localAtendimento(e.getLocalAtendimento())
+                .dataRelato(e.getDataRelato())
+                .nomePaciente(e.getNomePaciente())
+                .cpf(e.getCpf())
+                .cns(e.getCns())
+                .contatoPaciente(e.getContatoPaciente())
+                .idade(e.getIdade())
+                .dataNascimento(e.getDataNascimento())
+                .sexo(e.getSexo())
+                .corPele(e.getCorPele())
+                .queixaPrincipal(e.getQueixaPrincipal())
+                .localizacaoAnatomica(e.getLocalizacaoAnatomica())
+                .ladoAcometimento(e.getLadoAcometimento())
+                .coloracao(e.getColoracao())
+                .consistencia(e.getConsistencia())
+                .superficie(e.getSuperficie())
+                .insercao(e.getInsercao())
+                .tamanho(e.getTamanho())
+                .lesaoFundamental(e.getLesaoFundamental())
+                .sintomatologia(e.getSintomatologia())
+                .palpacaoLinfonodal(e.getPalpacaoLinfonodal())
+                .caracteristicasClinicas(e.getCaracteristicasClinicas())
+                .tempoEvolucao(e.getTempoEvolucao())
+                .historiaDoencaAtual(e.getHistoriaDoencaAtual())
+                .doencaPreexistente(e.getDoencaPreexistente())
+                .habitosVicios(e.getHabitosVicios())
+                .hipotesePrincipal(e.getHipotesePrincipal())
+                .hipoteseSecundaria(e.getHipoteseSecundaria())
+                .realizouBiopsia(e.getRealizouBiopsia())
+                .tipoBiopsia(e.getTipoBiopsia())
+                .dataBiopsia(e.getDataBiopsia())
+                .cid10(e.getCid10())
+                .hipotesePrincipalConsultor(e.getHipotesePrincipalConsultor())
+                .hipoteseSecundariaConsultor(e.getHipoteseSecundariaConsultor())
+                .condutaSugerida(e.getCondutaSugerida())
+                .coordenacaoCuidado(e.getCoordenacaoCuidado())
+                .qualidadeImagens(e.getQualidadeImagens())
+                .lesaoSuspeita(e.getLesaoSuspeita())
+                .consultorResponsavel(e.getConsultorResponsavel())
+                .emailConsultor(e.getEmailConsultor())
+                .dataResposta(e.getDataResposta())
+                .sourceFile(e.getSourceFile())
+                .build();
+    }
+
     private RelatoCasoTelessaudeEntity toEntity(RelatoCasoTelessaude r) {
         return RelatoCasoTelessaudeEntity.builder()
                 .rowId(r.getRowId())

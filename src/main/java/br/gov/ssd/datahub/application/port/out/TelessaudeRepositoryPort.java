@@ -7,4 +7,6 @@ import java.util.List;
 public interface TelessaudeRepositoryPort {
 
     void salvarTodos(List<RelatoCasoTelessaude> relatos);
+
+    List<RelatoCasoTelessaude> buscarTodos();
 }

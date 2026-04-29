@@ -242,7 +242,7 @@ src/main/java/br/gov/ssd/datahub/
 | Fase 1 | Einstein | Concluída |
 | Fase 2 | Fiocruz | Concluída |
 | Fase 3 | Núcleo Telessaúde | Concluída |
-| Fase 4 | Consolidação Cruzada | Não iniciada |
+| Fase 4 | Consolidação Cruzada | Concluída |
 | Fase 5 | Relatórios e Entrega | Não iniciada |
 
 ---

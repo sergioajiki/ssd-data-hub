@@ -35,6 +35,52 @@ public class EinsteinJpaAdapter implements EinsteinRepositoryPort {
         log.info("Einstein: {} registros persistidos", novas.size());
     }
 
+    @Override
+    public List<SolicitacaoEinstein> buscarTodos() {
+        return repository.findAll().stream()
+                .map(this::toDomain)
+                .toList();
+    }
+
+    private SolicitacaoEinstein toDomain(SolicitacaoEinsteinEntity e) {
+        return SolicitacaoEinstein.builder()
+                .idSolicitacao(e.getIdSolicitacao())
+                .status(e.getStatus())
+                .telesolicitante(e.getTelesolicitante())
+                .teleconsultor(e.getTeleconsultor())
+                .finalizador(e.getFinalizador())
+                .teleregulador(e.getTeleregulador())
+                .horaSolicitado(e.getHoraSolicitado())
+                .horaConsultado(e.getHoraConsultado())
+                .horaFinalizado(e.getHoraFinalizado())
+                .horaAuditado(e.getHoraAuditado())
+                .horaModificado(e.getHoraModificado())
+                .agendamentoConfirmado(e.getAgendamentoConfirmado())
+                .agendamentoCancelado(e.getAgendamentoCancelado())
+                .nomePaciente(e.getNomePaciente())
+                .paisNascimento(e.getPaisNascimento())
+                .cns(e.getCns())
+                .cpf(e.getCpf())
+                .dataNascimento(e.getDataNascimento())
+                .idade(e.getIdade())
+                .idadeEmDias(e.getIdadeEmDias())
+                .sexo(e.getSexo())
+                .nomeMae(e.getNomeMae())
+                .especialidadeSolicitada(e.getEspecialidadeSolicitada())
+                .nomeMedicoTelesolicitante(e.getNomeMedicoTelesolicitante())
+                .nomeMedicoSolicitante(e.getNomeMedicoSolicitante())
+                .crmMedicoSolicitante(e.getCrmMedicoSolicitante())
+                .medicamentosEmUso(e.getMedicamentosEmUso())
+                .historiaClinica(e.getHistoriaClinica())
+                .cid10Principal(e.getCid10Principal())
+                .cid10Secundario(e.getCid10Secundario())
+                .recomendacoesMedicas(e.getRecomendacoesMedicas())
+                .resumoClinico(e.getResumoClinico())
+                .desfecho(e.getDesfecho())
+                .sourceFile(e.getSourceFile())
+                .build();
+    }
+
     private SolicitacaoEinsteinEntity toEntity(SolicitacaoEinstein s) {
         return SolicitacaoEinsteinEntity.builder()
                 .idSolicitacao(s.getIdSolicitacao())

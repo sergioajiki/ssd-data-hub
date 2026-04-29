@@ -7,4 +7,6 @@ import java.util.List;
 public interface FiocruzRepositoryPort {
 
     void salvarTodos(List<AtendimentoFiocruz> atendimentos);
+
+    List<AtendimentoFiocruz> buscarTodos();
 }

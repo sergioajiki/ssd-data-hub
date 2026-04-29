@@ -7,4 +7,6 @@ import java.util.List;
 public interface EinsteinRepositoryPort {
 
     void salvarTodos(List<SolicitacaoEinstein> solicitacoes);
+
+    List<SolicitacaoEinstein> buscarTodos();
 }

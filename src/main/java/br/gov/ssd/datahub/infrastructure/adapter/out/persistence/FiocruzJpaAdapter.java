@@ -46,6 +46,47 @@ public class FiocruzJpaAdapter implements FiocruzRepositoryPort {
         log.info("Fiocruz: {} registros persistidos", novas.size());
     }
 
+    @Override
+    public List<AtendimentoFiocruz> buscarTodos() {
+        return repository.findAll().stream()
+                .map(this::toDomain)
+                .toList();
+    }
+
+    private AtendimentoFiocruz toDomain(AtendimentoFiocruzEntity e) {
+        return AtendimentoFiocruz.builder()
+                .dataSolicitacao(e.getDataSolicitacao())
+                .tipoServico(e.getTipoServico())
+                .dataAgendamento(e.getDataAgendamento())
+                .horaAtendimento(e.getHoraAtendimento())
+                .estabelecimento(e.getEstabelecimento())
+                .especialidade(e.getEspecialidade())
+                .especialidadeMedico(e.getEspecialidadeMedico())
+                .cpfMedico(e.getCpfMedico())
+                .cboMedico(e.getCboMedico())
+                .statusConsulta(e.getStatusConsulta())
+                .municipio(e.getMunicipio())
+                .cpfPaciente(e.getCpfPaciente())
+                .nomePaciente(e.getNomePaciente())
+                .cnsPaciente(e.getCnsPaciente())
+                .racaPaciente(e.getRacaPaciente())
+                .etniaPaciente(e.getEtniaPaciente())
+                .dataNascimento(e.getDataNascimento())
+                .cidConsulta(e.getCidConsulta())
+                .telefone(e.getTelefone())
+                .tipoZona(e.getTipoZona())
+                .enderecoCompleto(e.getEnderecoCompleto())
+                .rua(e.getRua())
+                .cep(e.getCep())
+                .numImovel(e.getNumImovel())
+                .bairro(e.getBairro())
+                .complemento(e.getComplemento())
+                .classificacaoConclusao(e.getClassificacaoConclusao())
+                .descricaoEndereco(e.getDescricaoEndereco())
+                .sourceFile(e.getSourceFile())
+                .build();
+    }
+
     private String gerarChave(AtendimentoFiocruz a) {
         if (a.getCpfPaciente() == null || a.getDataAgendamento() == null || a.getHoraAtendimento() == null) {
             return null;

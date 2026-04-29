@@ -26,8 +26,16 @@ class EinsteinImportacaoIntegrationTest {
             excelAdapter.processar(is);
         }
 
-        long total = repository.count();
-        System.out.println("Registros importados: " + total);
-        assertThat(total).isGreaterThan(0);
+        long totalPrimeiraImportacao = repository.count();
+        System.out.println("Registros após 1ª importação: " + totalPrimeiraImportacao);
+        assertThat(totalPrimeiraImportacao).isGreaterThan(0);
+
+        try (InputStream is = getClass().getResourceAsStream("/einstein/raw_einstein.xlsx")) {
+            excelAdapter.processar(is);
+        }
+
+        long totalSegundaImportacao = repository.count();
+        System.out.println("Registros após 2ª importação (deve ser igual): " + totalSegundaImportacao);
+        assertThat(totalSegundaImportacao).isEqualTo(totalPrimeiraImportacao);
     }
 }

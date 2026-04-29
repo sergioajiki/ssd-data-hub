@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Set;
 
 @Slf4j
 @Component
@@ -18,11 +19,20 @@ public class EinsteinJpaAdapter implements EinsteinRepositoryPort {
 
     @Override
     public void salvarTodos(List<SolicitacaoEinstein> solicitacoes) {
-        List<SolicitacaoEinsteinEntity> entities = solicitacoes.stream()
+        Set<Long> existentes = repository.findAllIdSolicitacao();
+
+        List<SolicitacaoEinsteinEntity> novas = solicitacoes.stream()
+                .filter(s -> s.getIdSolicitacao() == null || !existentes.contains(s.getIdSolicitacao()))
                 .map(this::toEntity)
                 .toList();
-        repository.saveAll(entities);
-        log.info("Einstein: {} registros persistidos", entities.size());
+
+        int duplicados = solicitacoes.size() - novas.size();
+        if (duplicados > 0) {
+            log.info("Einstein: {} registros duplicados ignorados", duplicados);
+        }
+
+        repository.saveAll(novas);
+        log.info("Einstein: {} registros persistidos", novas.size());
     }
 
     private SolicitacaoEinsteinEntity toEntity(SolicitacaoEinstein s) {

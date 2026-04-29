@@ -114,14 +114,14 @@ src/main/java/br/gov/ssd/datahub/
 - [x] Criar port de saída `EinsteinRepositoryPort`
 - [x] Implementar adapter de leitura Excel (`EinsteinExcelAdapter`)
 - [x] Implementar regras de normalização (nomes, datas, CIDs)
-- [ ] Implementar deduplicação de registros
+- [x] Implementar deduplicação de registros
 - [x] Implementar adapter de persistência JPA (`EinsteinJpaAdapter`)
 
 **Testes e Validação**
 - [ ] Criar testes unitários das regras de domínio
-- [ ] Criar testes de integração (leitura Excel → persistência H2)
-- [ ] Validar dados persistidos com especialista de domínio
-- [ ] Corrigir ajustes apontados na validação
+- [x] Criar testes de integração (leitura Excel → persistência H2)
+- [x] Validar dados persistidos com especialista de domínio
+- [x] Corrigir ajustes apontados na validação
 
 ---
 
@@ -239,7 +239,7 @@ src/main/java/br/gov/ssd/datahub/
 | Fase | Descrição | Status |
 |---|---|---|
 | Fase 0 | Setup do Projeto | Concluída |
-| Fase 1 | Einstein | Em andamento |
+| Fase 1 | Einstein | Concluída |
 | Fase 2 | Fiocruz | Não iniciada |
 | Fase 3 | Núcleo Telessaúde | Não iniciada |
 | Fase 4 | Consolidação Cruzada | Não iniciada |

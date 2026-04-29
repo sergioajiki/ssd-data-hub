@@ -129,28 +129,28 @@ src/main/java/br/gov/ssd/datahub/
 > Objetivo: Dados da Fiocruz limpos, validados e persistidos no banco.
 
 **Análise e Mapeamento**
-- [ ] Receber e analisar planilha modelo da Fiocruz
-- [ ] Documentar dicionário de dados
-- [ ] Mapear colunas para entidades de domínio
-- [ ] Identificar campos equivalentes aos da Einstein (base para consolidação futura)
+- [x] Receber e analisar planilha modelo da Fiocruz
+- [x] Documentar dicionário de dados
+- [x] Mapear colunas para entidades de domínio
+- [x] Identificar campos equivalentes aos da Einstein (base para consolidação futura)
 
 **Domínio**
-- [ ] Criar/adaptar entidades de domínio da Fiocruz
-- [ ] Implementar regras de validação específicas da Fiocruz
+- [x] Criar/adaptar entidades de domínio da Fiocruz
+- [x] Implementar regras de validação específicas da Fiocruz
 
 **Implementação**
-- [ ] Criar port de entrada `ImportarFiocruzUseCase`
-- [ ] Criar port de saída `FiocruzRepositoryPort`
-- [ ] Implementar adapter de leitura Excel (`FiocruzExcelAdapter`)
-- [ ] Implementar regras de normalização específicas da Fiocruz
-- [ ] Implementar deduplicação de registros
-- [ ] Implementar adapter de persistência JPA (`FiocruzJpaAdapter`)
+- [x] Criar port de entrada `ImportarFiocruzUseCase`
+- [x] Criar port de saída `FiocruzRepositoryPort`
+- [x] Implementar adapter de leitura Excel (`FiocruzExcelAdapter`)
+- [x] Implementar regras de normalização específicas da Fiocruz
+- [x] Implementar deduplicação de registros
+- [x] Implementar adapter de persistência JPA (`FiocruzJpaAdapter`)
 
 **Testes e Validação**
-- [ ] Criar testes unitários das regras de domínio
-- [ ] Criar testes de integração
-- [ ] Validar dados persistidos com especialista de domínio
-- [ ] Corrigir ajustes apontados na validação
+- [x] Criar testes unitários das regras de domínio
+- [x] Criar testes de integração
+- [x] Validar dados persistidos com especialista de domínio
+- [x] Corrigir ajustes apontados na validação
 
 ---
 
@@ -240,7 +240,7 @@ src/main/java/br/gov/ssd/datahub/
 |---|---|---|
 | Fase 0 | Setup do Projeto | Concluída |
 | Fase 1 | Einstein | Concluída |
-| Fase 2 | Fiocruz | Não iniciada |
+| Fase 2 | Fiocruz | Concluída |
 | Fase 3 | Núcleo Telessaúde | Não iniciada |
 | Fase 4 | Consolidação Cruzada | Não iniciada |
 | Fase 5 | Relatórios e Entrega | Não iniciada |
